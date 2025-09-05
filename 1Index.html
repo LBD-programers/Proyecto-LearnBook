@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>LearnBook</title> <!-- NO cambiar el título según tus restricciones -->
-  <link rel="stylesheet" href="style.CSS">
+  <link rel="stylesheet" href="Styles.css">
 </head>
 <body>
   <!-- Navegación principal -->
@@ -82,16 +82,16 @@
       <nav id="niveles" class="niveles-row" aria-label="Niveles disponibles">
         <!-- Imágenes horizontales de 150px (botones) -->
         <button class="nivel-btn" data-nivel="sexto" aria-label="Sexto grado">
-          <img src="assets/level6.png" alt="Sexto" width="150" height="150">
+          <img src="Recursos visuales/6to.jpg" alt="Sexto" width="150" height="150">
           <span>Sexto</span>
         </button>
         <button class="nivel-btn" data-nivel="primero" aria-label="Primer año">
-          <img src="assets/level1.png" alt="Primer año" width="150" height="150">
-          <span>Primer Año</span>
+          <img src="Recursos visuales/1ro.jpg" alt="Octavo" width="150" height="150">
+          <span>Septimo</span>
         </button>
         <button class="nivel-btn" data-nivel="segundo" aria-label="Segundo año">
-          <img src="assets/level2.png" alt="Segundo año" width="150" height="150">
-          <span>Segundo Año</span>
+          <img src="Recursos visuales/2do.jpg" alt="Octavo" width="150" height="150">
+          <span>Octavo</span>
         </button>
       </nav>
 
@@ -102,15 +102,49 @@
           <h3>Clases - Sexto Grado</h3>
           <nav id="clasesdisponibles" class="clases-row" aria-label="Clases del nivel">
             <button class="clase-btn" data-url="clase-matematicas.html">
-              <img src="assets/math.png" alt="Matemáticas" width="150" height="150">
+              <img src="Recursos visuales/mate6to.jpg" alt="Matemáticas" width="150" height="150">
               <span>Matemáticas</span>
             </button>
             <button class="clase-btn" data-url="clase-ciencias.html">
-              <img src="assets/science.png" alt="Ciencias" width="150" height="150">
+              <img src="Recursos visuales/ciencias6to.jpg" alt="Ciencias" width="150" height="150">
               <span>Ciencias</span>
             </button>
             <button class="clase-btn" data-url="clase-ingles.html">
-              <img src="assets/english.png" alt="Inglés" width="150" height="150">
+              <img src="Recursos visuales/ingles6to.jpg" alt="Inglés" width="150" height="150">
+              <span>Inglés</span>
+            </button>
+          </nav>
+        </div>
+          <div class="nivel-panel" data-nivel="septimo" hidden>
+          <h3>Clases - Septimo grado</h3>
+          <nav id="clasesdisponibles" class="clases-row" aria-label="Clases del nivel">
+            <button class="clase-btn" data-url="clase-matematicas.html">
+              <img src="Recursos visuales/mate7mo.jpg" alt="Matemáticas" width="150" height="150">
+              <span>Matemáticas</span>
+            </button>
+            <button class="clase-btn" data-url="clase-ciencias.html">
+              <img src="Recursos visuales/ciencias1ro.jpg" alt="Ciencias" width="150" height="150">
+              <span>Ciencias</span>
+            </button>
+            <button class="clase-btn" data-url="clase-ingles.html">
+              <img src="Recursos visuales/ingles1ro.jpg" alt="Inglés" width="150" height="150">
+              <span>Inglés</span>
+            </button>
+          </nav>
+        </div>
+          <div class="nivel-panel" data-nivel="octavo" hidden>
+          <h3>Clases - Octavo Grado</h3>
+          <nav id="clasesdisponibles" class="clases-row" aria-label="Clases del nivel">
+            <button class="clase-btn" data-url="clase-matematicas.html">
+              <img src="Recursos visuales/mate8vo.jpg" alt="Matemáticas" width="150" height="150">
+              <span>Matemáticas</span>
+            </button>
+            <button class="clase-btn" data-url="clase-ciencias.html">
+              <img src="Recursos visuales/ciencias2do.jpg" alt="Ciencias" width="150" height="150">
+              <span>Ciencias</span>
+            </button>
+            <button class="clase-btn" data-url="clase-ingles.html">
+              <img src="Recursos visuales/ingles2do.jpg" alt="Inglés" width="150" height="150">
               <span>Inglés</span>
             </button>
           </nav>
@@ -152,6 +186,6 @@
     <p>© LearnBook — Proyecto estudiantil</p>
   </footer>
 
-  <script src="node.JS"></script>
+  <script src="Node.js"></script>
 </body>
 </html>
