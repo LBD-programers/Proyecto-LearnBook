@@ -2,10 +2,10 @@
 import os
 from datetime import datetime
 from flask import Flask, request, jsonify, send_from_directory
-from flask_cors import CORS
+from flask_cors import CORS 
 from sqlalchemy import create_engine, Column, Integer, String, DateTime, Text, ForeignKey
-from sqlalchemy.orm import declarative_base, sessionmaker, relationship
-from werkzeug.security import generate_password_hash, check_password_hash
+from sqlalchemy.orm import declarative_base, sessionmaker, relationship 
+from werkzeug.security import generate_password_hash, check_password_hash 
 
 BASE_DIR = os.path.abspath(os.path.dirname(__file__))
 DB_PATH = os.path.join(BASE_DIR, 'instance', 'learnbook.db')
@@ -46,7 +46,7 @@ Base.metadata.create_all(bind=engine)
 # Rutas
 @app.route('/')
 def index():
-    return send_from_directory(app.static_folder, 'index-2.html')
+    return send_from_directory(app.static_folder, '1Index.html')
 
 @app.route('/api/register', methods=['POST'])
 def register():
