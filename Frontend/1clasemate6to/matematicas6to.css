@@ -1,0 +1,398 @@
+/* ================================
+   matematicas6to.css
+   Estilos para lista de lecciones,
+   topbar de progreso y behaviors
+   ================================ */
+
+/* --- reutiliza variables del style global si existen --- */
+:root{
+  --primary:#0077b6;
+  --accent:#00b4d8;
+  --muted:#6b7a90;
+  --card:#ffffff;
+  --xp-color:#ffd166;
+}
+
+/* Header (ya tenías esto; le añadimos clase para ocultar cuando haga falta) */
+.class-header { /* mantiene tu estilo original */
+  background: linear-gradient(135deg, #0077b6, #00b4d8);
+  color: white;
+  padding: 2rem 1rem;
+  text-align: center;
+  border-bottom: 5px solid #023e8a;
+}
+.class-header h1 {
+    font-size: 2.2rem;
+    margin: 0.5rem 0;
+}
+
+.class-header p {
+    font-size: 1.1rem;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* Botón volver */
+.volver-inicio {
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    transition: color 0.3s ease;
+}
+
+.volver-inicio i {
+    margin-right: 0.5rem;
+}
+
+.volver-inicio:hover {
+    color: #90e0ef;
+}
+
+
+/* main layout (ya estaban) */
+.class-main {
+    padding: 2rem 1rem;
+    background: #f9f9f9;
+    min-height:60vh;
+}
+.class-container {
+    max-width:1100px;
+    margin:0 auto;
+}
+
+/* Secciones */
+.class-section {
+    margin-bottom: 3rem;
+}
+
+.class-section h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: #023e8a;
+}
+
+.class-section p {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+/* Introducción */
+.introduction-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    align-items: center;
+    background: white;
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.class-image {
+    max-width: 300px;
+    border-radius: 12px;
+    flex: 1;
+}
+
+.welcome-message {
+    flex: 2;
+}
+
+.welcome-message h3 {
+    margin-top: 0.5rem;
+    color: #0077b6;
+}
+
+.welcome-message ul {
+    list-style-type: disc;
+    padding-left: 1.5rem;
+    color: #444;
+}
+
+/* Botones de temas */
+.topic-buttons {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 1.2rem;
+    margin-top: 1rem;
+}
+
+.topic-button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    background: white;
+    border-radius: 12px;
+    padding: 1rem;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.topic-button img {
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 0.8rem;
+}
+
+.topic-button span {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #023e8a;
+    text-align: center;
+}
+
+.topic-button:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+}
+
+.topic-topbar {
+  display:flex;
+  gap:1rem;
+  align-items:center;
+  justify-content:space-between;
+  background: linear-gradient(90deg, rgba(255,255,255,0.98), rgba(250,250,255,0.98));
+  border-radius:12px;
+  padding:0.8rem 1rem;
+  margin-bottom:1rem;
+  box-shadow:0 6px 18px rgba(15,40,70,0.06);
+  flex-wrap:wrap;
+}
+
+.topic-topbar .back-main {
+  background:transparent;
+  border:none;
+  color:var(--primary);
+  font-weight:700;
+  cursor:pointer;
+  padding:.4rem .6rem;
+  border-radius:8px;
+}
+.topic-topbar .back-main:hover { 
+    background:rgba(15,111,191,0.06) 
+}
+
+/* Progress info group */
+.progress-info { 
+    display:flex;
+    gap:1rem;
+    align-items:center;
+    flex:1;
+    justify-content:flex-end;
+    min-width:220px;
+    flex-wrap:wrap;
+}
+
+/* Streak */
+.streak { 
+    display:flex;
+    align-items:center;
+    gap:.4rem;
+}
+.streak .label { 
+    display:block;
+    font-size:0.75rem;
+    color:var(--muted);
+}
+.streak .value { 
+    font-weight:800;
+    color:var(--primary);
+}
+
+/* XP */
+.xp { 
+    display:flex;
+    align-items:center;
+    gap:.4rem;
+}
+.xp .label { 
+    font-size:.75rem;
+    color:var(--muted);
+}
+.xp .value { 
+    font-weight:800;
+    color:var(--muted);
+}
+.xp .xp-icon { color:var(--xp-color); }
+
+/* Progress bar */
+.progress { 
+    display:flex;
+    align-items:center;
+    gap:.6rem;
+    min-width:220px;
+}
+.progress .label { 
+    font-size:0.75rem;
+    color:var(--muted);
+    display:block;
+}
+.progress-bar {
+  width:180px;
+  height:10px;
+  background:#eef6fb;
+  border-radius:999px;
+  overflow:hidden;
+  border:1px solid rgba(0,0,0,0.03);
+}
+.progress-fill {
+  height:100%;
+  width:0%;
+  background:linear-gradient(90deg,var(--primary),var(--accent));
+  transition:width .5s ease;
+}
+.progress .percent { 
+    font-weight:700;
+    color:var(--muted);
+    font-size:0.9rem;
+}
+
+/* Topic body */
+.topic-body { 
+    background:var(--card);
+    border-radius:12px;
+    padding:1rem;
+    margin-bottom:1.6rem;
+    box-shadow:0 8px 26px rgba(15,111,191,.04);
+}
+
+/* Heading and description */
+.topic-heading { 
+    color:var(--primary);
+    margin-top:0; 
+}
+.topic-desc { 
+    color:var(--muted); 
+    margin-bottom:1rem; 
+}
+
+/* Lesson list - estilo "camino" tipo Mimo (línea vertical con nodos) */
+.lesson-list { 
+    list-style:none;
+    padding-left:0;
+    margin:0; 
+    display:flex;
+    flex-direction:column;
+    gap:14px; 
+}
+.lesson-item {
+  display:flex;
+  align-items:center;
+  gap:12px;
+  padding:12px;
+  border-radius:10px;
+  background:#fff;
+  border:1px solid rgba(0,0,0,0.03);
+  transition:transform .18s ease, box-shadow .18s ease;
+}
+.lesson-item:hover { 
+    transform:translateY(-4px); 
+    box-shadow:0 8px 20px rgba(0,0,0,0.06); 
+}
+
+/* Nodo izquierdo (círculo + conector) */
+.lesson-item::before{
+  content:"";
+  width:14px;
+  height:14px;
+  border-radius:50%;
+  background:linear-gradient(180deg,var(--primary),var(--accent));
+  flex:0 0 14px; margin-left:6px; box-shadow:0 3px 8px rgba(15,111,191,.18);
+}
+.lesson-item + .lesson-item { 
+    position:relative; 
+}
+.lesson-item + .lesson-item::after {
+  /* line vertical entre nodos */
+  content:""; 
+  position:absolute; 
+  left:13px; 
+  top:-18px; 
+  bottom: calc(100% + 6px); 
+  width:2px; 
+  background: linear-gradient(180deg, rgba(15,111,191,0.08), rgba(15,111,191,0.02));
+}
+
+/* Link principal */
+.lesson-link { 
+    color:#023e8a;
+    font-weight:700;
+    text-decoration:none; 
+    flex:1; 
+}
+.lesson-link:focus { outline:2px solid rgba(15,111,191,.18); outline-offset:3px; }
+
+/* Actions: boton completar + status */
+.lesson-actions { 
+    display:flex;
+    gap:.6rem;
+    align-items:center;
+}
+.btn-complete {
+    padding:.35rem .6rem;
+    border-radius:8px;
+    border:1px solid rgba(0,0,0,0.06);
+    background:transparent;
+    color:var(--primary);
+    cursor:pointer;
+    font-weight:700;
+}
+.btn-complete[aria-pressed="true"] { 
+    background:var(--primary);
+    color:#fff;
+    box-shadow:0 6px 15px rgba(15,111,191,.12);
+}
+.status { 
+    font-size:0.85rem;
+    color:var(--muted);
+}
+
+/* Estados completado / incorrect (solo UI) */
+.lesson-item.completed {
+    opacity:0.95; 
+    border-color: rgba(0,0,0,0.06); 
+    background:linear-gradient(180deg,#f8fffb,#ffffff);
+}
+.lesson-item.completed .lesson-link {
+     text-decoration:line-through;
+     color:#6b8ea6; 
+     font-weight:700
+}
+.lesson-item.completed::before { 
+    background:linear-gradient(180deg,#3ac569,#2fa656) }
+
+/* Small screens */
+@media (max-width:700px) {
+  .topic-topbar { flex-direction:column; align-items:stretch; gap:.6rem }
+  .progress-info { justify-content:space-between; }
+  .progress-bar { width:140px; }
+  .lesson-item { padding:10px; gap:10px; }
+}
+
+/* ocultar header cuando 'hidden' (controlado con JS) */
+.header-hidden { 
+    display:none !important; 
+    height:0 !important;}
+
+/* Estilos adicionales de accesibilidad */
+.lesson-link:focus, .btn-complete:focus, .back-main:focus { 
+    box-shadow:0 0 0 4px rgba(15,111,191,.12); 
+    outline:none; 
+    border-radius:8px; 
+}
+
+/* Footer */
+.class-footer {
+    background: #023e8a;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+    font-size: 0.9rem;
+}

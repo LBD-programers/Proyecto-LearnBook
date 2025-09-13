@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>LearnBook</title>
+
+  <!-- Estilos -->
+  <link rel="stylesheet" href="Styles.css"/>
+
+  <!-- Material Symbols (para el toggle de tema si quieres usar icono) -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"/>
+
+  <!-- Accesibilidad básica -->
+  <meta name="description" content="LearnBook: Plataforma educativa con recursos y clases para distintos niveles escolares."/>
+</head>
+
+<body>
+  <!-- NAV -->
+  <nav class="nav-principal">
+    <div class="nav-inner">
+      <div class="logo">
+        <h1>LearnBook</h1>
+      </div>
+
+      <div class="nav-buttons" role="navigation" aria-label="Navegación principal">
+        <button class="nav-btn active" data-target="general">General</button>
+        <button class="nav-btn" data-target="clases">Clases</button>
+        <button class="nav-btn" data-target="usuario">Usuario</button>
+        <button class="nav-btn" data-target="ayuda">Ayuda</button>
+      </div>
+
+      <button class="hamburger" aria-label="Abrir menú">☰</button>
+
+      <!-- Botón modo oscuro -->
+      <button id="theme-toggle" aria-label="Cambiar tema" class="theme-toggle">
+        <span class="material-symbols-outlined" id="theme-icon">dark_mode</span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Lema / frase por sección -->
+  <header class="site-header">
+    <p id="section-lema" class="lema">
+   Tu apoyo extra en el aprendizaje.
+    </p>
+  </header>
+
+  <main>
+    <!-- ============ GENERAL ============ -->
+    <section id="general" class="seccion active" aria-labelledby="que-es-learnbook">
+      <article class="intro">
+        <h2 id="que-es-learnbook">¿Qué es LearnBook?</h2>
+
+        <p><strong>LearnBook</strong> es una plataforma educativa creada por estudiantes de undécimo grado para apoyar el aprendizaje de niñas, niños y jóvenes en distintos niveles.</p>
+
+        <p>Reunimos recursos claros, prácticos y actualizados en materias clave como <strong>Matemáticas</strong>, <strong>Ciencias</strong> e <strong>Inglés</strong>. Nuestra idea es que encuentres explicaciones sencillas, ejemplos guiados y actividades interactivas que te ayuden a comprender y practicar a tu ritmo.</p>
+
+        <p>Además, fomentamos la colaboración entre estudiantes y docentes mediante espacios de preguntas, retroalimentación y acompañamiento. Queremos que aprender sea accesible, motivador y, sobre todo, útil para tu día a día.</p>
+      </article>
+
+      <!-- FAQ -->
+      <section class="faq" aria-labelledby="faqTitle">
+        <h2 id="faqTitle">Preguntas Frecuentes</h2>
+
+        <div class="faq-list" id="faqList">
+          <!-- 1 -->
+          <div class="faq-item">
+            <h3 class="faq-q" role="button" tabindex="0" aria-expanded="false">
+              <span class="faq-text">¿Cómo me registro o comienzo?</span>
+              <!-- FIX: ancho fijo para que el libro no se mueva -->
+              <span class="faq-icon" aria-hidden="true" style="display:inline-block;width:1.6em;text-align:center;">📕</span>
+            </h3>
+            <div class="faq-a">
+              Solo necesitas crear una cuenta con tu nombre y grado escolar. Luego eliges si quieres empezar con Matemáticas o con Inglés. ¡Listo para aprender!
+            </div>
+          </div>
+
+          <!-- 2 -->
+          <div class="faq-item">
+            <h3 class="faq-q" role="button" tabindex="0" aria-expanded="false">
+              <span class="faq-text">¿Puedo avanzar a mi propio ritmo?</span>
+              <span class="faq-icon" aria-hidden="true" style="display:inline-block;width:1.6em;text-align:center;">📕</span>
+            </h3>
+            <div class="faq-a">
+              Sí, cada estudiante puede aprender a su ritmo. Puedes detenerte, repetir o avanzar cuando te sientas listo.
+            </div>
+          </div>
+
+          <!-- 3 -->
+          <div class="faq-item">
+            <h3 class="faq-q" role="button" tabindex="0" aria-expanded="false">
+              <span class="faq-text">¿Qué pasa si no entiendo una lección?</span>
+              <span class="faq-icon" aria-hidden="true" style="display:inline-block;width:1.6em;text-align:center;">📕</span>
+            </h3>
+            <div class="faq-a">
+              No pasa nada. Puedes volver a verla las veces que quieras. También encontrarás pistas y ejemplos extra que te ayudarán a entender mejor.
+            </div>
+          </div>
+
+          <!-- 4 -->
+          <div class="faq-item">
+            <h3 class="faq-q" role="button" tabindex="0" aria-expanded="false">
+              <span class="faq-text">¿Cómo se desbloquea la siguiente lección?</span>
+              <span class="faq-icon" aria-hidden="true" style="display:inline-block;width:1.6em;text-align:center;">📕</span>
+            </h3>
+            <div class="faq-a">
+              Necesitas terminar los ejercicios de la lección actual. Si logras un puntaje mínimo (por ejemplo, 70%), la siguiente lección se desbloqueará automáticamente.
+            </div>
+          </div>
+
+          <!-- 5 -->
+          <div class="faq-item">
+            <h3 class="faq-q" role="button" tabindex="0" aria-expanded="false">
+              <span class="faq-text">¿Puedo revisar mis respuestas o errores?</span>
+              <span class="faq-icon" aria-hidden="true" style="display:inline-block;width:1.6em;text-align:center;">📕</span>
+            </h3>
+            <div class="faq-a">
+              Sí, al final de cada lección podrás ver tus respuestas incorrectas junto con una explicación para que aprendas de los errores.
+            </div>
+          </div>
+
+          <!-- 6 -->
+          <div class="faq-item">
+            <h3 class="faq-q" role="button" tabindex="0" aria-expanded="false">
+              <span class="faq-text">¿Hay actividades interactivas o juegos?</span>
+              <span class="faq-icon" aria-hidden="true" style="display:inline-block;width:1.6em;text-align:center;">📕</span>
+            </h3>
+            <div class="faq-a">
+              ¡Claro! Algunas preguntas se presentan en forma de juegos, como unir, arrastrar y soltar o resolver pequeños retos para que aprender sea más divertido.
+            </div>
+          </div>
+
+          <!-- 7 -->
+          <div class="faq-item">
+            <h3 class="faq-q" role="button" tabindex="0" aria-expanded="false">
+              <span class="faq-text">¿Recibo retroalimentación o puntos?</span>
+              <span class="faq-icon" aria-hidden="true" style="display:inline-block;width:1.6em;text-align:center;">📕</span>
+            </h3>
+            <div class="faq-a">
+              Sí, cada vez que completas una lección ganas puntos y medallas que muestran tu progreso. Entre más practiques, más recompensas obtendrás.
+            </div>
+          </div>
+
+          <!-- 8 -->
+          <div class="faq-item">
+            <h3 class="faq-q" role="button" tabindex="0" aria-expanded="false">
+              <span class="faq-text">¿Cuánto dura cada lección?</span>
+              <span class="faq-icon" aria-hidden="true" style="display:inline-block;width:1.6em;text-align:center;">📕</span>
+            </h3>
+            <div class="faq-a">
+              En promedio, cada lección dura entre 10 y 15 minutos. Suficiente para aprender sin aburrirse.
+            </div>
+          </div>
+
+          <!-- 9 -->
+          <div class="faq-item">
+            <h3 class="faq-q" role="button" tabindex="0" aria-expanded="false">
+              <span class="faq-text">¿Puedo pausar y continuar después?</span>
+              <span class="faq-icon" aria-hidden="true" style="display:inline-block;width:1.6em;text-align:center;">📕</span>
+            </h3>
+            <div class="faq-a">
+              Sí, tu progreso se guarda automáticamente, así que puedes salir y regresar cuando quieras sin perder lo que ya hiciste.
+            </div>
+          </div>
+
+          <!-- 10 -->
+          <div class="faq-item">
+            <h3 class="faq-q" role="button" tabindex="0" aria-expanded="false">
+              <span class="faq-text">¿Necesito internet para usar las lecciones?</span>
+              <span class="faq-icon" aria-hidden="true" style="display:inline-block;width:1.6em;text-align:center;">📕</span>
+            </h3>
+            <div class="faq-a">
+              Sí, necesitas internet para entrar a la plataforma. Más adelante, añadiremos la opción de descargar algunas lecciones para usarlas sin conexión.
+            </div>
+          </div>
+
+          <!-- 11 -->
+          <div class="faq-item">
+            <h3 class="faq-q" role="button" tabindex="0" aria-expanded="false">
+              <span class="faq-text">¿Qué pasa si mi progreso no se guarda o se pierde?</span>
+              <span class="faq-icon" aria-hidden="true" style="display:inline-block;width:1.6em;text-align:center;">📕</span>
+            </h3>
+            <div class="faq-a">
+              Primero revisa tu conexión a internet. Si aún así no se guarda, vuelve a iniciar sesión. Si el problema continúa, puedes escribirnos en la sección de Ayuda.
+            </div>
+          </div>
+
+          <!-- 12 -->
+          <div class="faq-item">
+            <h3 class="faq-q" role="button" tabindex="0" aria-expanded="false">
+              <span class="faq-text">¿Quién puede ayudarme si tengo dudas?</span>
+              <span class="faq-icon" aria-hidden="true" style="display:inline-block;width:1.6em;text-align:center;">📕</span>
+            </h3>
+            <div class="faq-a">
+              Puedes escribir tus preguntas en la sección de “Ayuda” y un tutor las responderá. También puedes pedir apoyo a tu profesor o a tus padres si lo necesitas.
+            </div>
+          </div>
+        </div>
+      </section>
+    </section>
+
+    <!-- ============ CLASES ============ -->
+    <section id="clases" class="seccion" aria-labelledby="clases-title">
+      <h2 id="clases-title" class="seccion-title">Clases disponibles</h2>
+
+      <nav id="niveles" class="niveles-row" aria-label="Niveles disponibles">
+        <button class="nivel-btn" data-nivel="sexto" aria-label="Sexto grado">
+          <img src="recursos-visuales/6to.jpg" alt="Sexto grado" width="150" height="150">
+          <span>Sexto</span>
+        </button>
+
+        <button class="nivel-btn" data-nivel="primero" aria-label="Primer año">
+          <img src="recursos-visuales/1ro.jpg" alt="Primer año" width="150" height="150">
+          <span>Primer Año</span>
+        </button>
+
+        <button class="nivel-btn" data-nivel="segundo" aria-label="Segundo año">
+          <img src="recursos-visuales/2do.jpg" alt="Segundo año" width="150" height="150">
+          <span>Segundo Año</span>
+        </button>
+      </nav>
+
+      <div id="clasesDisponibles" class="clases-disponibles">
+        <!-- Sexto -->
+        <div class="nivel-panel" data-nivel="sexto" hidden>
+          <h3 class="nivel-title">Clases - Sexto Grado</h3>
+          <nav class="clases-row" aria-label="Clases de Sexto">
+            <button class="clase-btn" data-url="1clasemate6to/matematicas6to.html">
+              <img src="recursos-visuales/mate6to.jpg" alt="Matemáticas" width="150" height="150">
+              <span>Matemáticas</span>
+            </button>
+            <button class="clase-btn" data-url="1claseciencias6to/ciencias6to.html">
+              <img src="recursos-visuales/ciencias6to.jpg" alt="Ciencias" width="150" height="150">
+              <span>Ciencias</span>
+            </button>
+            <!-- Enlace a la clase de inglés de sexto grado -->
+            <button class="clase-btn" data-url="1claseingles6to/ingles6to.html">
+              <img src="recursos-visuales/ingles6to.jpg" alt="Inglés" width="150" height="150">
+              <span>Inglés</span>
+            </button>
+          </nav>
+        </div>
+
+        <!-- Primero -->
+        <div class="nivel-panel" data-nivel="primero" hidden>
+          <h3 class="nivel-title">Clases - Primer Año</h3>
+          <nav class="clases-row" aria-label="Clases de Primer Año">
+            <button class="clase-btn" data-url="2carteleramate1ro/matematicas1ro.html">
+              <img src="recursos-visuales/mate7mo.jpg" alt="Matemáticas" width="150" height="150">
+              <span>Matemáticas</span>
+            </button>
+            <button class="clase-btn" data-url="2carteleraciencias1ro/ciencias1ro.html">
+              <img src="recursos-visuales/ciencias1ro.jpg" alt="Ciencias" width="150" height="150">
+              <span>Ciencias</span>
+            </button>
+            <button class="clase-btn" data-url="2carteleraingles1ro/ingles1ro.html">
+              <img src="recursos-visuales/ingles1ro.jpg" alt="Inglés" width="150" height="150">
+              <span>Inglés</span>
+            </button>
+          </nav>
+        </div>
+
+        <!-- Segundo -->
+        <div class="nivel-panel" data-nivel="segundo" hidden>
+          <h3 class="nivel-title">Clases - Segundo Año</h3>
+          <nav class="clases-row" aria-label="Clases de Segundo Año">
+            <button class="clase-btn" data-url="3carteleramate2do/matematicas2do.html">
+              <img src="recursos-visuales/mate8vo.jpg" alt="Matemáticas" width="150" height="150">
+              <span>Matemáticas</span>
+            </button>
+            <button class="clase-btn" data-url="3carteleraciencias2do/ciencias2do.html">
+              <img src="recursos-visuales/ciencias2do.jpg" alt="Ciencias" width="150" height="150">
+              <span>Ciencias</span>
+            </button>
+            <button class="clase-btn" data-url="3carteleraingles2do/ingles2do.html">
+              <img src="recursos-visuales/ingles2do.jpg" alt="Inglés" width="150" height="150">
+              <span>Inglés</span>
+            </button>
+          </nav>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ USUARIO ============ -->
+    <section id="usuario" class="seccion" aria-labelledby="usuario-title">
+      <h2 id="usuario-title" class="visually-hidden">Usuario</h2>
+      <aside class="auth-card">
+        <h3>Regístrate o inicia sesión</h3>
+        <form id="formAuth" novalidate>
+          <label for="name">Nombre</label>
+          <input id="name" name="name" type="text" placeholder="Tu nombre" required>
+
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" placeholder="correo@ejemplo.com" required>
+
+          <label for="password">Contraseña</label>
+          <input id="password" name="password" type="password" placeholder="••••••••" required minlength="6">
+
+          <div class="auth-actions">
+            <button id="btnRegister" type="button" class="primary">Registrar</button>
+            <button id="btnLogin" type="button" class="secondary">Iniciar Sesión</button>
+          </div>
+          <div id="authMessage" class="message" aria-live="polite"></div>
+        </form>
+      </aside>
+    </section>
+
+    <!-- ============ AYUDA ============ -->
+    <section id="ayuda" class="seccion" aria-labelledby="ayuda-title">
+      <h2 id="ayuda-title" class="seccion-title">Ayuda</h2>
+
+      <div class="ayuda-container">
+        <!-- Comentarios -->
+        <div class="feedback-card">
+          <h3>Danos tu opinión</h3>
+          <form id="feedbackForm" novalidate>
+            <label for="comentario">Comentario</label>
+            <textarea id="comentario" name="comentario" rows="5" maxlength="300" placeholder="Escribe tu opinión..." required></textarea>
+            <div class="charline">
+              <span id="charCount">0 / 300</span>
+            </div>
+
+            <div class="rating" aria-label="Calificación">
+              <span class="rating-label">Calificación:</span>
+              <div id="stars" class="stars" role="radiogroup">
+                <button class="star" data-value="1" aria-label="1 estrella" type="button">★</button>
+                <button class="star" data-value="2" aria-label="2 estrellas" type="button">★</button>
+                <button class="star" data-value="3" aria-label="3 estrellas" type="button">★</button>
+                <button class="star" data-value="4" aria-label="4 estrellas" type="button">★</button>
+                <button class="star" data-value="5" aria-label="5 estrellas" type="button">★</button>
+              </div>
+            </div>
+
+            <div class="feedback-actions">
+              <button id="btnSendFeedback" type="button" class="primary">Enviar</button>
+            </div>
+            <div id="feedbackMessage" class="message" aria-live="polite"></div>
+          </form>
+        </div>
+
+        <!-- QR / Síguenos -->
+        <div class="follow-us-card" style="display:flex;flex-direction:column;align-items:center;gap:.6rem;">
+          <h3 style="text-align:center;">Síguenos para más</h3>
+          <img src="recursos visuales/qr face.jpg" alt="Código QR de Facebook" width="220" height="220" loading="lazy">
+        </div>
+
+        <!-- Botón Soporte (centrado y a lo ancho de las dos columnas) -->
+        <div class="support-button-container" style="grid-column:1/-1;justify-self:center;text-align:center;">
+          <a class="support-button" href="https://wa.me/50557426225" target="_blank" rel="noopener">
+            LearnBook Support
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <p>© LearnBook — Proyecto estudiantil</p>
+    <p>© Todos los derechos reservados para LearnBook Developers</p>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="Node.js"></script>
+</body>
+</html>

@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Matemáticas - Sexto Grado | LearnBook</title>
+
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="matematicas6to.css">
+
+  <!-- Font Awesome para iconos -->
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+  <!-- Header (se muestra sólo en la pantalla principal) -->
+  <header class="class-header" id="main-header" role="banner">
+    <div class="header-inner">
+      <a href="../1Index.html" class="volver-inicio"><i class="fas fa-arrow-left"></i> Volver</a>
+      <h1>Matemáticas - Sexto Grado</h1>
+      <p>¡Domina las matemáticas con LearnBook! Lecciones interactivas y divertidas para jóvenes estudiantes.</p>
+    </div>
+  </header>
+
+  <main class="class-main" id="main-content">
+    <div class="class-container">
+
+      <!-- ========== PANTALLA PRINCIPAL (INTRO + TEMAS) ========== -->
+      <section class="class-section introduction" id="main-section" aria-labelledby="intro-title">
+        <h2 id="intro-title">¡Bienvenido a la clase de matemáticas de sexto grado!</h2>
+
+        <div class="introduction-content">
+          <img src="mt6to-visuales/mate6to.jpg" alt="Matemáticas Sexto Grado" class="class-image">
+          <div class="welcome-message">
+            <h3>¡Hola, jóvenes estudiantes!</h3>
+            <p>Estamos muy contentos de tenerlos en nuestra clase de matemáticas. Aquí aprenderemos juntos de una manera divertida y emocionante. ¡Prepárense para desafiar sus mentes y descubrir el poder de los números y las formas!</p>
+
+            <h3>Nuestros objetivos:</h3>
+            <ul>
+              <li>Comprender los conceptos de números, fracciones y decimales.</li>
+              <li>Explorar el mundo de los polígonos y sus propiedades.</li>
+              <li>Calcular áreas y volúmenes de diferentes figuras.</li>
+              <li>Aplicar las matemáticas en situaciones de la vida real.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="class-section topics" id="topics-section" aria-labelledby="topics-title">
+        <h2 id="topics-title">Temas de la clase</h2>
+        <p>Explora los diferentes temas que aprenderemos juntos:</p>
+
+        <!-- NOTA: los anchor tienen href por degradado, pero la navegación se controla por JS para
+             que sólo se acceda mediante click (no permitimos navegar sólo por hash). -->
+        <div class="topic-buttons" id="topic-buttons">
+          <a href="#topic-poligonos" class="topic-button" data-topic="poligonos" role="button" aria-pressed="false">
+            <img src="mt6to-visuales/poligonos.jpg" alt="Polígonos">
+            <span>Polígonos</span>
+          </a>
+
+          <a href="#topic-decimales" class="topic-button" data-topic="decimales" role="button" aria-pressed="false">
+            <img src="mt6to-visuales/decimales.jpg" alt="Números decimales">
+            <span>Números decimales</span>
+          </a>
+
+          <a href="#topic-fracciones" class="topic-button" data-topic="fracciones" role="button" aria-pressed="false">
+            <img src="mt6to-visuales/fracciones.jpg" alt="Fracciones">
+            <span>Fracciones</span>
+          </a>
+
+          <a href="#topic-area" class="topic-button" data-topic="area" role="button" aria-pressed="false">
+            <img src="mt6to-visuales/area.jpg" alt="Área">
+            <span>Área</span>
+          </a>
+
+          <a href="#topic-volumen" class="topic-button" data-topic="volumen" role="button" aria-pressed="false">
+            <img src="mt6to-visuales/volumen.jpg" alt="Volumen">
+            <span>Volumen</span>
+          </a>
+        </div>
+      </section>
+
+      <!-- ========== SECCIONES POR TEMA (ocultas por defecto) ========== -->
+      <!-- Cada sección contiene: barra superior con controles y lista de lecciones -->
+      <!-- Ejemplo para "poligonos". Las otras secciones se crean en JS dinámicamente (ver JS). -->
+      <section class="topic-section" id="topic-poligonos-section" data-topic="poligonos" hidden aria-labelledby="poligonos-title">
+        <div class="topic-topbar">
+          <button class="back-main" aria-label="Volver a temas"><i class="fas fa-arrow-left"></i> Temas</button>
+
+          <div class="progress-info" aria-hidden="false">
+            <div class="streak">
+              <span class="label">Racha</span>
+              <span class="value" id="streak-poligonos">0</span>
+              <span class="icon">🔥</span>
+            </div>
+
+            <div class="progress">
+              <span class="label">Progreso</span>
+              <div class="progress-bar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" role="progressbar">
+                <div class="progress-fill" style="width:0%" id="progress-fill-poligonos"></div>
+              </div>
+              <span class="percent" id="percent-poligonos">0%</span>
+            </div>
+
+            <div class="xp">
+              <span class="label">XP</span>
+              <span class="value" id="xp-poligonos">0</span>
+              <i class="fas fa-gem xp-icon" aria-hidden="true"></i>
+            </div>
+          </div>
+        </div>
+
+        <div class="topic-body">
+          <h2 id="poligonos-title" class="topic-heading">Polígonos</h2>
+          <p class="topic-desc">Lista de lecciones para Polígonos. Haz click en una lección para abrirla. Cuando termines, puedes marcarla como completada para obtener XP.</p>
+
+          <ul class="lesson-list" id="lessons-poligonos" aria-live="polite">
+            <!-- Ejemplo de items: los href apuntan a páginas de lección que crearás más adelante -->
+            <li class="lesson-item" data-lesson-id="p-1">
+              <a class="lesson-link" href="lecciones/poligonos/leccion-1.html">1. ¿Qué es un polígono?</a>
+              <div class="lesson-actions">
+                <button class="btn-complete" title="Marcar como completada" aria-pressed="false">Marcar</button>
+                <span class="status" aria-hidden="true"></span>
+              </div>
+            </li>
+
+            <li class="lesson-item" data-lesson-id="p-2">
+              <a class="lesson-link" href="lecciones/poligonos/leccion-2.html">2. Clasificación de polígonos</a>
+              <div class="lesson-actions">
+                <button class="btn-complete" title="Marcar como completada" aria-pressed="false">Marcar</button>
+                <span class="status" aria-hidden="true"></span>
+              </div>
+            </li>
+
+            <li class="lesson-item" data-lesson-id="p-3">
+              <a class="lesson-link" href="lecciones/poligonos/leccion-3.html">3. Propiedades y ejemplos</a>
+              <div class="lesson-actions">
+                <button class="btn-complete" title="Marcar como completada" aria-pressed="false">Marcar</button>
+                <span class="status" aria-hidden="true"></span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <!-- Seccion de fracciones -->
+      <section class="topic-section" id="topic-fracciones-section" data-topic="Fracciones" hidden aria-labelledby="fracciones-title">
+        <div class="topic-topbar">
+          <button class="back-main" aria-label="Volver a temas"><i class="fas fa-arrow-left"></i> Temas</button>
+
+          <div class="progress-info" aria-hidden="false">
+            <div class="streak">
+              <span class="label">Racha</span>
+              <span class="value" id="streak-fracciones">0</span>
+              <span class="icon">🔥</span>
+            </div>
+
+            <div class="progress">
+              <span class="label">Progreso</span>
+              <div class="progress-bar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" role="progressbar">
+                <div class="progress-fill" style="width:0%" id="progress-fill-fracciones"></div>
+              </div>
+              <span class="percent" id="percent-fracciones">0%</span>
+            </div>
+
+            <div class="xp">
+              <span class="label">XP</span>
+              <span class="value" id="xp-fracciones">0</span>
+              <i class="fas fa-gem xp-icon" aria-hidden="true"></i>
+            </div>
+          </div>
+        </div>
+
+        <div class="topic-body">
+          <h2 id="poligonos-title" class="topic-heading">Polígonos</h2>
+          <p class="topic-desc">Lista de lecciones para Polígonos. Haz click en una lección para abrirla. Cuando termines, puedes marcarla como completada para obtener XP.</p>
+
+          <ul class="lesson-list" id="lessons-poligonos" aria-live="polite">
+            <!-- Ejemplo de items: los href apuntan a páginas de lección que crearás más adelante -->
+            <li class="lesson-item" data-lesson-id="p-1">
+              <a class="lesson-link" href="lecciones/fracciones/leccion-1.html">1. Introducción a fracciones</a>
+              <div class="lesson-actions">
+                <button class="btn-complete" title="Marcar como completada" aria-pressed="false">Marcar</button>
+                <span class="status" aria-hidden="true"></span>
+              </div>
+            </li>
+
+            <li class="lesson-item" data-lesson-id="p-2">
+              <a class="lesson-link" href="lecciones/fracciones/leccion-2.html">2. Clasificación de fracciones</a>
+              <div class="lesson-actions">
+                <button class="btn-complete" title="Marcar como completada" aria-pressed="false">Marcar</button>
+                <span class="status" aria-hidden="true"></span>
+              </div>
+            </li>
+
+            <li class="lesson-item" data-lesson-id="p-3">
+              <a class="lesson-link" href="lecciones/fracciones/leccion-3.html">3. Propiedades y ejemplos de fracciones</a>
+              <div class="lesson-actions">
+                <button class="btn-complete" title="Marcar como completada" aria-pressed="false">Marcar</button>
+                <span class="status" aria-hidden="true"></span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Más secciones (se crearán dinámicamente si no existe) -->
+      <section class="topic-section" id="topic-decimales-section" data-topic="decimales" hidden></section>
+      <section class="topic-section" id="topic-fracciones-section" data-topic="fracciones" hidden></section>
+      <section class="topic-section" id="topic-area-section" data-topic="area" hidden></section>
+      <section class="topic-section" id="topic-volumen-section" data-topic="volumen" hidden></section>
+
+    </div>
+  </main>
+
+  <footer class="class-footer">
+    <p>© 2025 LearnBook - Matemáticas Sexto Grado</p>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="../script.js" defer></script>
+  <script src="matematicas6to.js" defer></script>
+</body>
+</html>
